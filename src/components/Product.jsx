@@ -85,7 +85,7 @@ const Product = ({ products }) => {
             {product.content}
           </p>
           <span className="flex gap-2">
-            {likeMap[product.id]?.liked === true ? (
+            {optimisticLikeMap[product.id]?.liked === true ? (
               <FcLike
                 onClick={() =>
                   startTransition(async () => handleLikes(product.id))
